@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Fonts Links -->
     <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <!-- /Fonts Links -->
+    
+    <!-- CSS Links -->
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- /CSS Links -->
+
+    <title>Simple Calculator</title>
+
 </head>
+
 <body>
 
     <!-- Header -->
@@ -26,8 +36,8 @@
         <!-- Display Section -->
         <Section class="display container">
 
-            <span class="display-text">0</span>
-            
+            <span class="display-text"></span>
+
         </Section>
         <!-- /Display Section -->
 
@@ -35,37 +45,38 @@
         <Section class="keybord container">
 
             <div class="grid">
-                <div class="buttons grey">7</div>
-                <div class="buttons grey">8</div>
-                <div class="buttons grey">9</div>
-                <div class="buttons grey">4</div>
-                <div class="buttons grey">5</div>
-                <div class="buttons grey">6</div>
-                <div class="buttons grey">1</div>
-                <div class="buttons grey">2</div>
-                <div class="buttons grey">3</div>
+                <button value="7" class="buttons grey">7</button>
+                <button value="8" class="buttons grey">8</button>
+                <button value="9" class="buttons grey">9</button>
+                <button value="4" class="buttons grey">4</button>
+                <button value="5" class="buttons grey">5</button>
+                <button value="6" class="buttons grey">6</button>
+                <button value="1" class="buttons grey">1</button>
+                <button value="2" class="buttons grey">2</button>
+                <button value="3" class="buttons grey">3</button>
                 <div class="last-row">
-                    <div class="buttons grey">0</div>
-                    <div class="buttons orange">=</div>
+                    <button value="0" class="buttons grey">0</button>
+                    <button id="result" value="=" class="buttons orange">=</button>
                 </div>
             </div>
 
             <div class="column">
-                <div class="buttons orange">C</div>
-                <div class="buttons blue">+</div>
-                <div class="buttons blue">-</div>
-                <div class="buttons blue">x</div>
-                <div class="buttons blue">/</div>
+                <button id="cancel" value="c" class="buttons orange">C</button>
+                <button value="+" class="buttons blue">+</button>
+                <button value="-" class="buttons blue">-</button>
+                <button value="*" class="buttons blue">x</button>
+                <button value="/" class="buttons blue">/</button>
             </div>
-            
+
         </Section>
-        <!-- /Buttons Section -->        
+        <!-- /Buttons Section -->
 
     </main>
     <!-- /Main -->
 
+    <script src="./js/functions.js"></script>
+    <script src="./js/script.js"></script>
 
-
-    
 </body>
+
 </html>

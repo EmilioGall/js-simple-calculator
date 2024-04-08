@@ -37,6 +37,7 @@
     flex-direction: row-reverse;
     padding-right: 10px;
     font-family: Seven Segment, sans-serif;
+    overflow-x: hidden;
 }
 
 .display-text {
@@ -118,4 +119,16 @@
 .blue {
     background-color: #77a8b0;
     color: white;
+}
+
+/* EFFECTS */
+
+/* Buttons Section */
+
+.buttons:hover {
+    cursor: pointer;
+}
+
+.buttons:active {
+    box-shadow: 2px -2px #8b8b8b;
 }

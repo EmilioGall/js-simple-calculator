@@ -1,0 +1,121 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* COMMON */
+
+.centered-text {
+    text-align: center;
+}
+
+.container {
+    width: 360px;
+    margin: 0px auto;
+}
+
+/* HEADER */
+
+.logo {
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 10px 10px 0 0;
+    margin-top: 50px;
+}
+
+/* MAIN */
+
+/* Display Section */
+
+.display {
+    background-color: black;
+    min-height: 80px;
+    color: #07c697;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+    font-family: Seven Segment, sans-serif;
+}
+
+.display-text {
+    font-size: 50px;
+    line-height: 80px;
+}
+
+/* Buttons Section */
+
+.keybord {
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 3;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.buttons {
+    margin: 5px;
+    border-radius: 5px;
+    font-family: "Orbitron", sans-serif;
+    box-shadow: -2px 2px #8b8b8b;
+}
+
+.grid .buttons {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
+}
+
+.column > .buttons {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+}
+
+.last-row {
+    display: flex;
+    width: 270px;
+}
+
+.last-row > .grey {
+    height: 80px;
+    line-height: 80px;
+    flex-grow: 1;
+}
+
+.last-row > .orange {
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    font-size: 50px;
+}
+
+.grey {
+    background-color: #bbb;
+}
+
+.orange {
+    background-color: #ff9f0a;
+    color: white;
+}
+
+.blue {
+    background-color: #77a8b0;
+    color: white;
+}

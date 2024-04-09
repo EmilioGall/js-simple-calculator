@@ -11,9 +11,13 @@ function numToDisplayOnClick() {
 
     displayElem.innerHTML += buttonNum;
 
-    calcArray.push(buttonNum);
+    // calcArray.push(buttonNum);
+
+    calcVar += buttonNum;
 
     console.log("calcArray", calcArray, typeof calcArray);
+
+    console.log("calcVar", calcVar, typeof calcVar);
 
 };
 
@@ -33,9 +37,15 @@ function opToDisplayOnClick() {
 
     displayElem.innerHTML += buttonOpText;
 
+    calcArray.push(calcVar);
+
+    console.log("calcArray", calcArray, typeof calcArray);
+
     calcArray.push(buttonOp);
 
     console.log("calcArray", calcArray, typeof calcArray);
+
+    calcVar = "";
 
     displayElem.textContent = "";
 

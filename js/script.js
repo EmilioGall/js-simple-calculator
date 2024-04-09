@@ -34,6 +34,12 @@ let calcArray = [];
 
 console.log("calcArray", calcArray, typeof calcArray);
 
+// Define variable for array of calculation.
+
+let calcVar = "";
+
+console.log("calcVar", calcVar, typeof calcVar);
+
 // Add Event listener to Numbers Buttons
 
 for (let i=0; i<numButtonsElem.length; i++) {
@@ -54,37 +60,56 @@ for (let i=0; i<opButtonsElem.length; i++) {
 
 resultButtonElem.addEventListener("click", function() {
 
+    calcArray.push(calcVar);
+
     displayElem.textContent = "";
 
     let result = "";
 
     console.log("result", result, typeof result);
 
-    for (let i=0; i<calcArray.length; i++) {
+    if (calcArray[1] === "+") {
 
-        result += calcArray[i];
+        console.log("test +");
+
+        result = parseInt(calcArray[0]) + parseInt(calcArray[2]);
+
+    } else if (calcArray[1] === "-") {
+
+        console.log("test -");
+
+        result = parseInt(calcArray[0]) - parseInt(calcArray[2]);
+
+    } else if (calcArray[1] === "*") {
+
+        console.log("test *");
+
+        result = parseInt(calcArray[0]) * parseInt(calcArray[2]);
+
+    } else if (calcArray[1] === "/") {
+
+        console.log("test /");
+
+        result = parseInt(calcArray[0]) / parseInt(calcArray[2]);
+
     };
 
     console.log("result", result, typeof result);
 
-    let finalResult = eval(result)
-
-    console.log("finalResult", finalResult, typeof finalResult);
-
     // Condition of error if /0
 
-    if (finalResult === Infinity) {
+    if (result === Infinity) {
 
         displayElem.innerHTML = "Error";
 
     } else {
 
-        displayElem.innerHTML = finalResult;
+        displayElem.innerHTML = result;
 
-        console.log("finalResult", finalResult, typeof finalResult);
+        console.log("result", result, typeof result);
     };
 
-    calcArray = [finalResult];
+    calcArray = [result];
 
     console.log("calcArray", calcArray, typeof calcArray);
 
